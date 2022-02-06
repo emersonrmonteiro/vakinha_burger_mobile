@@ -55,6 +55,6 @@ class AuthRepositoryImpl implements AuthRepository {
         stackTrace: StackTrace.current,
       );
     }
-    return UserModel.fromJson(result.body);
+    return UserModel.fromMap(result.body);
   }
 }
