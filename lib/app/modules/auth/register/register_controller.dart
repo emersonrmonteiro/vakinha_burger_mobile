@@ -2,11 +2,12 @@ import 'dart:developer';
 
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:vakinha_burger_mobile/app/core/contants/constants.dart';
-import 'package:vakinha_burger_mobile/app/core/mixins/loader_mixin.dart';
-import 'package:vakinha_burger_mobile/app/core/mixins/messages_mixin.dart';
-import 'package:vakinha_burger_mobile/app/core/rest_client/rest_client.dart';
-import 'package:vakinha_burger_mobile/app/repositories/auth/auth_repository.dart';
+
+import '../../../core/contants/constants.dart';
+import '../../../core/mixins/loader_mixin.dart';
+import '../../../core/mixins/messages_mixin.dart';
+import '../../../core/rest_client/rest_client.dart';
+import '../../../repositories/auth/auth_repository.dart';
 
 class RegisterController extends GetxController
     with LoaderMixin, MessagesMixin {

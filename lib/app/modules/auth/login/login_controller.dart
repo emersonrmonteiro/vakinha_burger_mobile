@@ -2,11 +2,12 @@ import 'dart:developer';
 
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:vakinha_burger_mobile/app/core/contants/constants.dart';
-import 'package:vakinha_burger_mobile/app/core/exceptions/user_notfount_exception.dart';
-import 'package:vakinha_burger_mobile/app/core/mixins/loader_mixin.dart';
-import 'package:vakinha_burger_mobile/app/core/mixins/messages_mixin.dart';
-import 'package:vakinha_burger_mobile/app/repositories/auth/auth_repository.dart';
+
+import '../../../core/contants/constants.dart';
+import '../../../core/exceptions/user_notfount_exception.dart';
+import '../../../core/mixins/loader_mixin.dart';
+import '../../../core/mixins/messages_mixin.dart';
+import '../../../repositories/auth/auth_repository.dart';
 
 class LoginController extends GetxController with LoaderMixin, MessagesMixin {
   final AuthRepository _authRepository;
@@ -34,12 +35,6 @@ class LoginController extends GetxController with LoaderMixin, MessagesMixin {
 
       final storage = GetStorage();
       storage.write(Constants.USER_KEY, userLogged.id);
-
-      _message(MessageModel(
-          title: 'Sucesso',
-          message: 'Cadastro realizado com sucesso',
-          type: MessageType.info));
-      _loading.toggle();
     } on UserNotFoundException catch (e, s) {
       _loading.toggle();
       log('Login ou senha inválidos', error: e, stackTrace: s);

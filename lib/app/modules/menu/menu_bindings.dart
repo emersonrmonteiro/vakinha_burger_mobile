@@ -1,7 +1,8 @@
 import 'package:get/get.dart';
-import 'package:vakinha_burger_mobile/app/repositories/auth/products/products_repository.dart';
-import 'package:vakinha_burger_mobile/app/repositories/auth/products/products_repository_impl.dart';
-import './menu_controller.dart';
+
+import '../../repositories/auth/products/products_repository.dart';
+import '../../repositories/auth/products/products_repository_impl.dart';
+import 'menu_controller.dart';
 
 class MenuBindings implements Bindings {
   @override

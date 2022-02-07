@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:vakinha_burger_mobile/app/core/ui/widgets/vakinha_button.dart';
-import 'package:vakinha_burger_mobile/app/modules/splash/splash_controller.dart';
+
+import '../../core/ui/widgets/vakinha_button.dart';
+import 'splash_controller.dart';
 
 class SplashPage extends GetView<Splashcontroller> {
   const SplashPage({Key? key}) : super(key: key);

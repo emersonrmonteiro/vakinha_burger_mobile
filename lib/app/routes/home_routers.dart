@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
-import 'package:vakinha_burger_mobile/app/modules/home/home_bindings.dart';
-import 'package:vakinha_burger_mobile/app/modules/home/home_page.dart';
+
+import '../modules/home/home_bindings.dart';
+import '../modules/home/home_page.dart';
 
 class HomeRouters {
   HomeRouters._();
