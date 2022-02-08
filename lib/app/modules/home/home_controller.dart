@@ -5,6 +5,8 @@ import '../../core/services/auth_service.dart';
 import '../../core/services/shopping_card_service.dart';
 import '../menu/menu_bindings.dart';
 import '../menu/menu_page.dart';
+import '../order/shopping_card/shopping_card_bindings.dart';
+import '../order/shopping_card/shopping_card_page.dart';
 
 class HomeController extends GetxController {
   static const NAVIGATOR_KEY = 1;
@@ -38,7 +40,14 @@ class HomeController extends GetxController {
         transition: Transition.fadeIn,
       );
     }
-    if (settings.name == '/order/shopping_card') {}
+    if (settings.name == '/order/shopping_card') {
+      return GetPageRoute(
+        settings: settings,
+        page: () => ShoppingCardPage(),
+        binding: ShoppingCardBindings(),
+        transition: Transition.fadeIn,
+      );
+    }
     if (settings.name == '/exit') {}
   }
 }

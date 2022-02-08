@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:vakinha_burger_mobile/app/routes/orders_router.dart';
 
 import 'app/core/bindings/application_bindings.dart';
 import 'app/core/ui/vakinha_ui.dart';
@@ -28,6 +29,7 @@ class VakinhaBurgerMainApp extends StatelessWidget {
         ...AuthRouters.routers,
         ...HomeRouters.routers,
         ...ProductRouters.routers,
+        ...OrdersRouter.routers,
       ],
     );
   }
